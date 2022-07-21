@@ -1,0 +1,32 @@
+{
+  "name": "cra-template-qjp-typescript",
+  "version": "1.0.0",
+  "keywords": [
+    "react",
+    "create-react-app",
+    "template",
+    "typescript",
+    "craco",
+    "ahooks",
+    "less",
+    "antd",
+    "router"
+  ],
+  "description": "The base TypeScript template for Create React App.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qjp88995/cra-template-qjp-typescript.git",
+    "directory": "."
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14"
+  },
+  "bugs": {
+    "url": "https://github.com/qjp88995/cra-template-qjp-typescript/issues"
+  },
+  "files": [
+    "template",
+    "template.json"
+  ]
+}
