@@ -1,6 +1,6 @@
-# cra-template-qjp
+# cra-template-qjp-typescript
 
-The qjp template for [Create React App](https://github.com/facebook/create-react-app)
+The qjp-typescript template for [Create React App](https://github.com/facebook/create-react-app)
 
 ## Usage
 
