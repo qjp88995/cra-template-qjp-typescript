@@ -14,7 +14,7 @@ const Home = () => {
         justifyContent: 'center',
         gap: 20
       }}>
-      <Title level={3}>欢迎使用cra-template-qinjiapeng</Title>
+      <Title level={3}>欢迎使用cra-template-qjp-typescript</Title>
       <Button type="primary">这是一个antd按钮</Button>
     </div>
   );
