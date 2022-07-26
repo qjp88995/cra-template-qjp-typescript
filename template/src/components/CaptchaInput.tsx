@@ -9,13 +9,14 @@ type Props = {
   length?: number;
   inputClassName?: number;
   disabled?: boolean;
+  id?: string;
 }
 
 /**
  * @description: 验证码输入器
  */
 const CaptchaInput: FC<Props> = (props) => {
-  const { value = '', onChange, length = 6, inputClassName, disabled = false } = props;
+  const { value = '', onChange, length = 6, inputClassName, disabled = false, id } = props;
   const [values, setValues] = useState(value ? value.split('') : []);
   const [curInd, setCurInd] = useState(0);
   const inputRefs = useRef<{ [key: number]: InputRef | null }>({});
@@ -53,7 +54,7 @@ const CaptchaInput: FC<Props> = (props) => {
   }
 
   return (
-    <Space onClick={handleFocus}>
+    <Space onClick={handleFocus} id={id}>
       {new Array(length).fill(null).map((_, i) => (
         <Input
           ref={(ref) => inputRefs.current[i] = ref}
