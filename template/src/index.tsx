@@ -1,18 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ConfigProvider } from 'antd';
+import zhCN from 'antd/es/locale/zh_CN';
+import moment from 'moment';
+import 'moment/locale/zh-cn';
 import './index.less';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+moment.locale('zh-cn');
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <ConfigProvider locale={zhCN}>
+      <Router>
+        <App />
+      </Router>
+    </ConfigProvider>
   </React.StrictMode>
 );
 
