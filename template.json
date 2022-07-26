@@ -1,6 +1,7 @@
 {
   "package": {
     "dependencies": {
+      "@ant-design/icons": "^4.7.0",
       "@craco/craco": "7.0.0-alpha.7",
       "@testing-library/jest-dom": "^5.14.1",
       "@testing-library/react": "^13.0.0",
