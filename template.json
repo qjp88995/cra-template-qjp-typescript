@@ -25,7 +25,7 @@
     },
     "devDependencies": {
       "babel-plugin-import": "^1.13.5",
-      "craco-less": "^2.0.0",
+      "craco-less": "2.1.0-alpha.0",
       "react-app-alias": "^2.2.1"
     },
     "scripts": {
