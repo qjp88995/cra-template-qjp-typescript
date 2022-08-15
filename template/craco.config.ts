@@ -1,5 +1,8 @@
+import { readFileSync } from 'fs';
+import { resolve } from 'path';
 const CracoLessPlugin = require('craco-less');
 const { CracoAliasPlugin } = require('react-app-alias');
+const lessToJS = require('less-vars-to-js');
 
 module.exports = {
   plugins: [
@@ -8,7 +11,7 @@ module.exports = {
       options: {
         lessLoaderOptions: {
           lessOptions: {
-            modifyVars: { '@primary-color': '#1DA57A' },
+            modifyVars: lessToJS(readFileSync(resolve(__dirname, 'src/theme.less'), 'utf8')),
             javascriptEnabled: true,
           },
         },
