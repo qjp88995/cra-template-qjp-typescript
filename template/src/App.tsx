@@ -1,15 +1,10 @@
-import { Route, Routes } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import router from './routes';
 import './App.less';
-import { Home, NotFound } from './routes';
 
 function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
