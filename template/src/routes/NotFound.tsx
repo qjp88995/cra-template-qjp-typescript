@@ -4,7 +4,7 @@ import styles from './NotFound.module.less';
 
 const { Paragraph, Title } = Typography;
 
-const NotFound = () => {
+const NotFound: React.FC = () => {
   const description = (
     <div>
       <Title level={4}>404</Title>

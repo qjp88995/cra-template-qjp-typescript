@@ -2,7 +2,7 @@ import { Button, Typography } from "antd";
 
 const { Title } = Typography;
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <div
       style={{

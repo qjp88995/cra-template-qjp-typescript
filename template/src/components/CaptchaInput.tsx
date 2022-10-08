@@ -1,6 +1,6 @@
 import { Input, InputRef, Space } from 'antd';
 import classNames from 'classnames';
-import { FC, KeyboardEvent, useEffect, useRef, useState } from 'react';
+import { KeyboardEvent, useEffect, useRef, useState } from 'react';
 import styles from './CaptchaInput.module.less';
 
 type Props = {
@@ -15,7 +15,7 @@ type Props = {
 /**
  * @description: 验证码输入器
  */
-const CaptchaInput: FC<Props> = (props) => {
+const CaptchaInput: React.FC<Props> = (props) => {
   const { value = '', onChange, length = 6, inputClassName, disabled = false, id } = props;
   const [values, setValues] = useState(value ? value.split('') : []);
   const [curInd, setCurInd] = useState(0);
