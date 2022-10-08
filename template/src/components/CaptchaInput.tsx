@@ -1,6 +1,6 @@
 import { Input, InputRef, Space } from 'antd';
 import classNames from 'classnames';
-import { KeyboardEvent, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './CaptchaInput.module.less';
 
 type Props = {
@@ -36,7 +36,7 @@ const CaptchaInput: React.FC<Props> = (props) => {
     }
   }, [length, values]);
 
-  const handleKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Backspace') {
       values.pop();
     }
