@@ -27,7 +27,7 @@ export const sliceFile = async (file: File, chunkSize = 2 * 1024 ** 2) => {
         if (process.env.NODE_ENV === 'development') {
           console.log('当前块:', i, '总数:', chunkTotal);
         }
-        res(e.target.result as ArrayBuffer);
+        res(e.target?.result as ArrayBuffer);
       };
 
       fileReader.onerror = function () {

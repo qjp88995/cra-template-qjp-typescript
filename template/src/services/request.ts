@@ -1,14 +1,14 @@
 import axios from "axios";
 
-const instance = axios.create();
+const request = axios.create();
 
-instance.defaults.responseType = 'json';
+request.defaults.responseType = 'json';
 
-instance.interceptors.request.use((config) => {
+request.interceptors.request.use((config) => {
   return config;
 }, error => {
   console.log(error);
   return Promise.reject(error);
 });
 
-export default instance;
+export default request;
