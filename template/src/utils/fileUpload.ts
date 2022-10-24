@@ -44,3 +44,15 @@ export const sliceFile = async (file: File, chunkSize = 2 * 1024 ** 2) => {
 
   return { md5, chunks };
 };
+
+/**
+ * 获取blob的MD5值
+ * @param blob 
+ * @returns 
+ */
+export const getBlobMd5 = async (blob: Blob) => {
+  const spark = new SparkMD5.ArrayBuffer();
+  const buffer = await blob.arrayBuffer();
+  spark.append(buffer);
+  return spark.end();
+};
