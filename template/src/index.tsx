@@ -4,8 +4,8 @@ import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
 import moment from 'moment';
 import 'moment/locale/zh-cn';
-import './index.less';
 import App from './App';
+import './index.less';
 import reportWebVitals from './reportWebVitals';
 
 moment.locale('zh-cn');
