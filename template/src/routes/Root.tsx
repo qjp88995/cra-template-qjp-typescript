@@ -1,7 +1,8 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import { useRequestInterceptorsResponse } from "@/hooks";
+import { useRequestInterceptorsRequest, useRequestInterceptorsResponse } from "@/hooks";
 
 const Root: React.FC = () => {
+  useRequestInterceptorsRequest();
   useRequestInterceptorsResponse();
 
   return (
