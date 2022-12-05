@@ -2,13 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ConfigProvider } from 'antd';
 import zhCN from 'antd/es/locale/zh_CN';
-import moment from 'moment';
-import 'moment/locale/zh-cn';
+import 'antd/dist/reset.css';
+import dayjs from 'dayjs';
+import 'dayjs/locale/zh-cn';
 import App from './App';
 import './index.less';
 import reportWebVitals from './reportWebVitals';
 
-moment.locale('zh-cn');
+dayjs.locale('zh-cn');
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
