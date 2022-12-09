@@ -1,6 +1,5 @@
 import { Button, Empty, Typography } from 'antd';
 import { Link } from 'react-router-dom';
-import styles from './NotFound.module.less';
 
 const { Paragraph, Title } = Typography;
 
@@ -16,7 +15,7 @@ const NotFound: React.FC = () => {
   );
 
   return (
-    <div className={styles.page}>
+    <div className="w-screen h-screen flex flex-col justify-center items-center">
       <Empty
         description={description}
       />

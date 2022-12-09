@@ -1,7 +1,7 @@
+import { useEffect, useRef, useState } from 'react';
 import { Input, InputRef, Space } from 'antd';
 import classNames from 'classnames';
-import { useEffect, useRef, useState } from 'react';
-import styles from './CaptchaInput.module.less';
+import useStyles from './styles';
 
 type Props = {
   value?: string;
@@ -20,6 +20,7 @@ const CaptchaInput: React.FC<Props> = (props) => {
   const [values, setValues] = useState(value ? value.split('') : []);
   const [curInd, setCurInd] = useState(0);
   const inputRefs = useRef<{ [key: number]: InputRef | null }>({});
+  const styles = useStyles();
 
   useEffect(() => {
     const arr = value ? value.split('') : [];
