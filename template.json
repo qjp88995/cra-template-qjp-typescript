@@ -42,6 +42,9 @@
       "test": "craco test",
       "eject": "craco eject",
       "clear_cache": "rimraf node_modules/.cache"
+    },
+    "resolutions": {
+      "dayjs": "^1.11.6"
     }
   }
 }
