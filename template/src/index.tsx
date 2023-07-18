@@ -6,7 +6,7 @@ import 'antd/dist/reset.css';
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
 import App from './App';
-import './index.less';
+import './index.scss';
 import reportWebVitals from './reportWebVitals';
 
 dayjs.locale('zh-cn');
