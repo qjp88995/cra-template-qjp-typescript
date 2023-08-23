@@ -1,5 +1,8 @@
-import { Outlet, ScrollRestoration } from "react-router-dom";
-import { useRequestInterceptorsRequest, useRequestInterceptorsResponse } from "@/hooks";
+import { Outlet, ScrollRestoration } from 'react-router-dom';
+import {
+  useRequestInterceptorsRequest,
+  useRequestInterceptorsResponse,
+} from '@/hooks';
 
 const Root: React.FC = () => {
   useRequestInterceptorsRequest();
@@ -10,7 +13,9 @@ const Root: React.FC = () => {
       <ScrollRestoration
         getKey={(location, _matches) => {
           const paths: string[] = [];
-          return paths.includes(location.pathname) ? location.pathname : location.key;
+          return paths.includes(location.pathname)
+            ? location.pathname
+            : location.key;
         }}
       />
       <Outlet />

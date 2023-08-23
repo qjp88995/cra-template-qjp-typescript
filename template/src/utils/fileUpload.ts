@@ -1,10 +1,7 @@
-import SparkMD5 from "spark-md5";
+import SparkMD5 from 'spark-md5';
 
 /**
  * 文件切割
- * @param file File
- * @param chunkSize 块大小，默认 2MB
- * @returns
  */
 export const sliceFile = async (file: File, chunkSize = 2 * 1024 ** 2) => {
   const blobSlice = File.prototype.slice;
@@ -15,7 +12,7 @@ export const sliceFile = async (file: File, chunkSize = 2 * 1024 ** 2) => {
 
   for (let i = 0; i < chunkTotal; i++) {
     const start = i * chunkSize;
-    const end = ((start + chunkSize) >= file.size) ? file.size : start + chunkSize;
+    const end = start + chunkSize >= file.size ? file.size : start + chunkSize;
 
     const fileChunk = blobSlice.call(file, start, end);
     chunks.push(fileChunk);
@@ -47,8 +44,6 @@ export const sliceFile = async (file: File, chunkSize = 2 * 1024 ** 2) => {
 
 /**
  * 获取blob的MD5值
- * @param blob 
- * @returns 
  */
 export const getBlobMd5 = async (blob: Blob) => {
   const spark = new SparkMD5.ArrayBuffer();

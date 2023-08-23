@@ -11,7 +11,9 @@ import reportWebVitals from './reportWebVitals';
 
 dayjs.locale('zh-cn');
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
 root.render(
   <React.StrictMode>
     <ConfigProvider locale={zhCN}>

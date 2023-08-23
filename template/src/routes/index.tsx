@@ -6,18 +6,18 @@ import NotFound from './NotFound';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: (<Root />),
+    element: <Root />,
     children: [
       {
         path: '/',
-        element: (<Home />),
+        element: <Home />,
       },
       {
         path: '*',
-        element: (<NotFound />),
-      }
+        element: <NotFound />,
+      },
     ],
-  }
+  },
 ]);
 
 export default router;

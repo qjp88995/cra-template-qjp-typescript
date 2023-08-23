@@ -5,21 +5,31 @@ import useStyles from './styles';
 
 type Props = {
   value?: string;
-  onChange?: (value: string) => void;
   length?: number;
   inputClassName?: number;
   disabled?: boolean;
   id?: string;
-}
+  onChange?: (value: string) => void;
+};
 
 /**
  * @description: 验证码输入器
  */
 const CaptchaInput: React.FC<Props> = (props) => {
-  const { value = '', onChange, length = 6, inputClassName, disabled = false, id } = props;
+  const {
+    value = '',
+    length = 6,
+    inputClassName,
+    disabled = false,
+    id,
+    onChange,
+  } = props;
+
   const [values, setValues] = useState(value ? value.split('') : []);
   const [curInd, setCurInd] = useState(0);
+
   const inputRefs = useRef<{ [key: number]: InputRef | null }>({});
+
   const styles = useStyles();
 
   useEffect(() => {
@@ -52,13 +62,13 @@ const CaptchaInput: React.FC<Props> = (props) => {
   const handleFocus = () => {
     if (curInd === -1) return;
     inputRefs.current[curInd]?.focus();
-  }
+  };
 
   return (
     <Space onClick={handleFocus} id={id}>
       {new Array(length).fill(null).map((_, i) => (
         <Input
-          ref={(ref) => inputRefs.current[i] = ref}
+          ref={(ref) => (inputRefs.current[i] = ref)}
           className={classNames(styles.input, inputClassName)}
           style={{ pointerEvents: curInd === i ? 'auto' : 'none' }}
           key={i}

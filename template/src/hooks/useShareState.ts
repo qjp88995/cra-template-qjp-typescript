@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from 'react';
 
 /**
  * 获取共享状态事件名称
@@ -17,7 +17,7 @@ export const getShareStateStoreName = (key: string) => {
 /**
  * 获取共享状态值
  */
- export const getShareStateValue = <T = any>(key: string): T | null => {
+export const getShareStateValue = <T = any>(key: string): T | null => {
   const value = localStorage.getItem(getShareStateStoreName(key));
   return value && JSON.parse(value);
 };
@@ -37,7 +37,9 @@ export const setShareStateValue = <T = any>(key: string, value: T) => {
 /**
  * 全局跨页面共享状态
  */
-export const useShareState = <T = any>(key: string): [T | null, (value: T | null) => void] => {
+export const useShareState = <T = any>(
+  key: string
+): [T | null, (value: T | null) => void] => {
   const [data, setData] = useState(getShareStateValue<T>(key));
 
   // key变化时修改data
@@ -69,9 +71,12 @@ export const useShareState = <T = any>(key: string): [T | null, (value: T | null
     };
   }, [key]);
 
-  const setValue = useCallback((value: T | null) => {
-    setShareStateValue(key, value);
-  }, [key]);
+  const setValue = useCallback(
+    (value: T | null) => {
+      setShareStateValue(key, value);
+    },
+    [key]
+  );
 
   return [data, setValue];
 };

@@ -4,9 +4,6 @@ import validator from 'validator';
 export const formValidator = {
   /**
    * 验证是否是手机号
-   * @param name 字段
-   * @param message 错误消息
-   * @returns 
    */
   mobile(name: string, message: string) {
     return {
@@ -21,12 +18,9 @@ export const formValidator = {
       },
     };
   },
+
   /**
    * 验证两个值是否相等
-   * @param name 字段
-   * @param withName 比较的字段
-   * @param message 错误消息
-   * @returns 
    */
   consistent(name: string, withName: string, message: string): RuleRender {
     return ({ getFieldValue }) => ({

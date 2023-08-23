@@ -1,5 +1,5 @@
-import { Button, Empty, Typography } from 'antd';
 import { Link } from 'react-router-dom';
+import { Button, Empty, Typography } from 'antd';
 
 const { Paragraph, Title } = Typography;
 
@@ -16,9 +16,7 @@ const NotFound: React.FC = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center">
-      <Empty
-        description={description}
-      />
+      <Empty description={description} />
     </div>
   );
 };

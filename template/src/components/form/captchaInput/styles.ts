@@ -5,7 +5,7 @@ const useStyles = createUseStyles({
     width: 32,
     height: 32,
     textAlign: 'center',
-  }
+  },
 });
 
 export default useStyles;

@@ -8,7 +8,7 @@ type News = {
   published_at: string;
   abstract: string;
   content?: string;
-}
+};
 
 export const getNews = async (): Promise<News[]> => {
   return await request.get('/api/news');
